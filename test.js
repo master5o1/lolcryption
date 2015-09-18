@@ -10,34 +10,42 @@ var _ = require('./');
 
 var _2 = _interopRequireDefault(_);
 
+(0, _tape2['default'])('ROT13', function (t) {
+  var cipher = _2['default'].rot13('The quick brown fox jumps over the lazy dog.');
+
+  t.plan(1);
+
+  t.equal(cipher, 'Gur dhvpx oebja sbk whzcf bire gur ynml qbt.', 'ROT13 of "The quick brown fox jumps over the lazy dog." should be "Gur dhvpx oebja sbk whzcf bire gur ynml qbt."');
+});
+
 (0, _tape2['default'])('LOLcryption', function (t) {
-  var cipher = _2['default'].enlolcrypt('hello, world.');
-  var plaintext = _2['default'].delolcrypt('toxxa, jadxq.');
+  var cipher = _2['default'].enlolcrypt('The quick brown fox jumps over the lazy dog.');
+  var plaintext = _2['default'].delolcrypt('Gto ceupw ndajz rak veybf ahod gto ximl qas.');
 
   t.plan(2);
 
-  t.equal(cipher, 'toxxa, jadxq.', 'encryption of "hello, world." should be "toxxa, jadxq."');
-  t.equal(plaintext, 'hello, world.', 'decryption of "toxxa, jadxq." should be "hello, world."');
+  t.equal(cipher, 'Gto ceupw ndajz rak veybf ahod gto ximl qas.', 'encryption of "The quick brown fox jumps over the lazy dog." should be "Gto ceupw ndajz rak veybf ahod gto ximl qas."');
+  t.equal(plaintext, 'The quick brown fox jumps over the lazy dog.', 'decryption of "Gto ceupw ndajz rak veybf ahod gto ximl qas." should be "The quick brown fox jumps over the lazy dog."');
 });
 
 (0, _tape2['default'])('imgur', function (t) {
-  var cipher = _2['default'].imgurEncrypt('hello, world.');
-  var plaintext = _2['default'].imgurDecrypt('gwkkim qieks,');
+  var cipher = _2['default'].imgurEncrypt('The quick brown fox jumps over the lazy dog.');
+  var plaintext = _2['default'].imgurDecrypt('Rgw =yuxj veiqb diz hynoa icwe rgw kp\'t sif,');
 
   t.plan(2);
 
-  t.equal(cipher, 'gwkkim qieks,', 'encryption of "hello, world." should be "gwkkim qieks,"');
-  t.equal(plaintext, 'hello, world.', 'decryption of "gwkkim qieks," should be "hello, world."');
+  t.equal(cipher, 'Rgw =yuxj veiqb diz hynoa icwe rgw kp\'t sif,', 'encryption of "The quick brown fox jumps over the lazy dog." should be "Rgw =yuxj veiqb diz hynoa icwe rgw kp\'t sif,"');
+  t.equal(plaintext, 'The quick brown fox jumps over the lazy dog.', 'decryption of "Rgw =yuxj veiqb diz hynoa icwe rgw kp\'t sif," should be "The quick brown fox jumps over the lazy dog."');
 });
 
 (0, _tape2['default'])('Theucon (Simple)', function (t) {
-  var cipher = _2['default'].theuconEncrypt('hello, world.');
-  var plaintext = _2['default'].theuconDecrypt('hll,wde olo.r');
+  var cipher = _2['default'].theuconEncrypt('The quick brown fox jumps over the lazy dog.');
+  var plaintext = _2['default'].theuconDecrypt('Te ucrwo prtzo.hikbnjmv lqo xsh d u eafeygo ');
 
   t.plan(2);
 
-  t.equal(cipher, 'hll,wde olo.r', 'encryption of "hello, world." should be "hll,wde olo.r"');
-  t.equal(plaintext, 'hello, world.', 'decryption of "hll,wde olo.r" should be "hello, world."');
+  t.equal(cipher, 'Te ucrwo prtzo.hikbnjmv lqo xsh d u eafeygo ', 'encryption of "The quick brown fox jumps over the lazy dog." should be "Te ucrwo prtzo.hikbnjmv lqo xsh d u eafeygo "');
+  t.equal(plaintext, 'The quick brown fox jumps over the lazy dog.', 'decryption of "Te ucrwo prtzo.hikbnjmv lqo xsh d u eafeygo " should be "The quick brown fox jumps over the lazy dog."');
 });
 
 (0, _tape2['default'])('Theucon (Preserve Spaces)', function (t) {

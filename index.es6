@@ -1,4 +1,4 @@
-import primesUntil from 'primes';
+import primesBetween from 'primes';
 import isPrime from 'is-prime';
 
 export default {
@@ -12,8 +12,13 @@ export default {
   theuconUnscrambleArray: theuconUnscrambleArray,
   theuconEncryptPreserveSpaces: theuconEncryptPreserveSpaces,
   theuconDecryptPreserveSpaces: theuconDecryptPreserveSpaces,
+  rot13: rot13,
   tr: tr
 };
+
+function rot13(text) {
+  return tr(text, 'abcdefghijklmnopqrstuvwxyz', 'nopqrstuvwxyzabcdefghijklm');
+}
 
 function enlolcrypt(text) {
   return tr(text, 'aeioubcdfghjklmnpqrstvwxyz', 'iouaenpqrstvwxyzbcdfghjklm');
@@ -78,7 +83,7 @@ function theuconScrambleArray(remaining) {
 function theuconUnscrambleArray(remaining) {
   let output = [];
   while (remaining.length) {
-    let primes = [0].concat(primesUntil(remaining.length));
+    let primes = [0].concat(primesBetween(0, remaining.length));
     let currentOutput = remaining.map(() => '');
     let current = remaining.splice(0, primes.length);
 

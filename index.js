@@ -25,8 +25,13 @@ exports['default'] = {
   theuconUnscrambleArray: theuconUnscrambleArray,
   theuconEncryptPreserveSpaces: theuconEncryptPreserveSpaces,
   theuconDecryptPreserveSpaces: theuconDecryptPreserveSpaces,
+  rot13: rot13,
   tr: tr
 };
+
+function rot13(text) {
+  return tr(text, 'abcdefghijklmnopqrstuvwxyz', 'nopqrstuvwxyzabcdefghijklm');
+}
 
 function enlolcrypt(text) {
   return tr(text, 'aeioubcdfghjklmnpqrstvwxyz', 'iouaenpqrstvwxyzbcdfghjklm');
@@ -99,7 +104,7 @@ function theuconUnscrambleArray(remaining) {
   var output = [];
 
   var _loop2 = function () {
-    var primes = [0].concat((0, _primes2['default'])(remaining.length));
+    var primes = [0].concat((0, _primes2['default'])(0, remaining.length));
     var currentOutput = remaining.map(function () {
       return '';
     });
