@@ -10,7 +10,7 @@
     "lolcryption",
     "rot13"
   ],
-  "author": "Jason Schwarzenberger",
+  "author": "Jason Schwarzenberger <jason@master5o1.com> (http://jason.schwarzenberger.co.nz)",
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^4.1.3",
