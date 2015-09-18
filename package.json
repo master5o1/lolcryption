@@ -1,6 +1,6 @@
 {
   "name": "lolcryption",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A lolcryption library. Made to find out how to make node modules",
   "main": "index.js",
   "scripts": {
