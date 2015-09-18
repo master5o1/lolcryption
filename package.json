@@ -1,6 +1,6 @@
 {
   "name": "lolcryption",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A lolcryption library. Made to find out how to make node modules",
   "main": "index.js",
   "scripts": {
@@ -24,5 +24,13 @@
     "is-prime": "^1.0.1",
     "primes": "^0.0.1",
     "tape": "^4.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/master5o1/lolcryption.git"
+  },
+  "bugs": {
+    "url": "https://github.com/master5o1/lolcryption/issues"
+  },
+  "homepage": "https://github.com/master5o1/lolcryption"
 }
