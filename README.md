@@ -1,5 +1,8 @@
 # lolcryption
-> learning how to make node modules, es6 modules and testing with tape.
+
+Made this so I could learn how to make node modules, npm packages, use babel + es6 and test with Tape.
+
+More information about lolcryption at [lolcryption.master5o1.com](http://lolcryption.master5o1.com/)
 
 ## Install
 
